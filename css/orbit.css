@@ -1,0 +1,168 @@
+/* CSS for jQuery Orbit Plugin 1.2.3
+ * www.ZURB.com/playground
+ * Copyright 2010, ZURB
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ 
+ 
+ 
+/* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
+   ================================================== */
+#featured { 
+	width: 100%!important;
+	margin-top: -70px;
+	position: relative;
+	z-index: 1;
+	height: 650px!important;
+	background: #000 url('../img/icons/loading.gif') no-repeat center center;
+	overflow: hidden; }
+#featured>img,  
+#featured>div,
+#featured>a { display: none; }
+
+
+html:not(.js) #featured {
+	display: none;
+}
+
+/* CONTAINER
+   ================================================== */
+
+
+div.orbit-wrapper {
+    width: 100%!important;
+    height: 1px;
+    top: 0px;
+    z-index: 1;
+    position: relative; }
+
+div.orbit {
+    width: 1px;
+    position: relative;
+    overflow: hidden }
+
+div.orbit>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+
+div.orbit > a {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0; 
+    display: none; }
+
+.orbit > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    
+
+
+/* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+
+
+
+/* TIMER
+   ================================================== */
+
+div.timer {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    display: none;
+    right: 10px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 1001; }
+
+span.rotator {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background: url(../img/orbit/rotator-black.png) no-repeat;
+    z-index: 3; }
+
+span.mask {
+    display: block;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden; }
+
+span.rotator.move {
+    left: 0 }
+
+span.mask.move {
+    width: 40px;
+    left: 0;
+    background: url(../img/orbit/timer-black.png) repeat 0 0; }
+
+span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/orbit/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0; }
+
+span.pause.active {
+    background: url(../img/orbit/pause-black.png) no-repeat 0 -40px }
+
+div.timer:hover span.pause,
+span.pause.active {
+    opacity: 1 }
+
+
+/* CAPTIONS
+   ================================================== */
+
+.orbit-caption {
+    display: none;
+    font-family: "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif; }
+
+.orbit-wrapper .orbit-caption {
+    background: #000;
+    background: rgba(0,0,0,.6);
+    z-index: 1000;
+    color: #fff;
+	text-align: center;
+	padding: 7px 0;
+    font-size: 13px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; }
+
+
+/* DIRECTIONAL NAV
+   ================================================== */
+
+div.slider-nav {
+    display: block }
+
+div.slider-nav span {
+    position: fixed;
+    z-index: 1000;
+    text-indent: -9999px;
+    cursor: pointer; 
+ }
+
+
+
